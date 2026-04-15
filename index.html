@@ -51,67 +51,30 @@
             line-height: 1.6;
         }
         
-        /* Form Section */
-        .form-section {
+        /* CTA Section */
+        .cta-section {
             background: white;
             border-radius: 12px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            padding: 40px;
+            padding: 50px 40px;
             max-width: 600px;
             margin: -60px auto 60px;
             position: relative;
             z-index: 10;
-        }
-        
-        .form-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1a1a2e;
-            margin-bottom: 30px;
             text-align: center;
         }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            font-weight: 600;
+        .cta-title {
+            font-size: 1.8rem;
+            font-weight: 700;
             color: #1a1a2e;
-            margin-bottom: 8px;
-            font-size: 0.95rem;
+            margin-bottom: 15px;
         }
         
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-            font-family: inherit;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #d4af37;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        @media (max-width: 600px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
+        .cta-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
         }
         
         .btn-primary {
@@ -358,57 +321,13 @@
         </div>
     </section>
 
-    <!-- Form Section -->
+    <!-- CTA Section -->
     <div class="container">
-        <div class="form-section">
-            <h2 class="form-title">Request Your Free AI Visibility Audit</h2>
-            <form id="auditForm" action="YOUR_GOOGLE_FORM_URL_HERE" method="POST">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="businessName">Business Name *</label>
-                        <input type="text" id="businessName" name="businessName" required>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="website">Website URL *</label>
-                    <input type="url" id="website" name="website" placeholder="https://yourbusiness.com" required>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="locations">Number of Locations *</label>
-                    <select id="locations" name="locations" required>
-                        <option value="">Select...</option>
-                        <option value="1">1 Location</option>
-                        <option value="2-5">2-5 Locations</option>
-                        <option value="6-10">6-10 Locations</option>
-                        <option value="10+">10+ Locations</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="notes">Notes (Optional)</label>
-                    <textarea id="notes" name="notes" rows="3" placeholder="Anything specific you'd like us to know about your business?"></textarea>
-                </div>
-                
-                <button type="submit" class="btn-primary">Get My Free Audit</button>
-                <p class="form-microcopy">No long-term commitment. We'll review your site and send your audit with clear next steps.</p>
-            </form>
+        <div class="cta-section">
+            <h2 class="cta-title">Request Your Free AI Visibility Audit</h2>
+            <p class="cta-subtitle">See exactly where your business stands in AI search and what to do about it.</p>
+            <a href="YOUR_GOOGLE_FORM_URL_HERE" class="btn-primary">Get My Free AI Visibility Audit</a>
+            <p class="form-microcopy">No long-term commitment. We'll review your site and send your audit with clear next steps.</p>
         </div>
     </div>
 
