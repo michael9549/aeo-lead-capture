@@ -5,281 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is AI Visibility? | Understanding AI Search</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #154f8b 0%, #0f3d6e 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero h1 span {
-            color: #ffd816;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            padding: 50px 40px;
-            max-width: 600px;
-            margin: -60px auto 60px;
-            position: relative;
-            z-index: 10;
-            text-align: center;
-        }
-        
-        .cta-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #154f8b;
-            margin-bottom: 15px;
-        }
-        
-        .cta-subtitle {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-        
-        .btn-primary {
-            display: inline-block;
-            background: linear-gradient(135deg, #ffd816 0%, #e6c200 100%);
-            color: #154f8b;
-            padding: 18px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-        }
-        
-        .form-microcopy {
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 15px;
-        }
-        
-        /* Section Styles */
-        .section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #154f8b;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-dark {
-            background: #154f8b;
-            color: white;
-        }
-        
-        .section-dark .section-title {
-            color: white;
-        }
-        
-        /* Benefits */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border-left: 4px solid #ffd816;
-        }
-        
-        .benefit-card h3 {
-            color: #154f8b;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .benefit-card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        .check-icon {
-            color: #ffd816;
-            font-weight: bold;
-        }
-        
-        /* What's Included */
-        .included-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        
-        .included-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 20px;
-            background: rgba(212, 175, 55, 0.1);
-            border-radius: 8px;
-        }
-        
-        .included-item .icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        
-        .included-item h4 {
-            color: #154f8b;
-            margin-bottom: 5px;
-        }
-        
-        .included-item p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        /* Why Work With Us */
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        
-        .trust-card {
-            background: rgba(255,255,255,0.05);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        
-        .trust-card h3 {
-            color: #ffd816;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .trust-card p {
-            opacity: 0.9;
-            font-size: 0.95rem;
-        }
-        
-        /* FAQ */
-        .faq-item {
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .faq-question {
-            padding: 20px 25px;
-            font-weight: 700;
-            color: #154f8b;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-answer {
-            padding: 0 25px 20px;
-            color: #666;
-            line-height: 1.7;
-        }
-        
-        /* Final CTA */
-        .final-cta {
-            text-align: center;
-            padding: 100px 0;
-        }
-        
-        .final-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .final-cta p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-        
-        .btn-large {
-            font-size: 1.2rem;
-            padding: 20px 50px;
-        }
-        
-        /* Footer */
-        footer {
-            background: #0f0f1e;
-            color: rgba(255,255,255,0.6);
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        footer a {
-            color: #ffd816;
-            text-decoration: none;
-        }
-        
-            <div class="footer-links">
-                <a href="mailto:support@michaelangelmartin.com">Support</a>
-            </div>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .hero { background: linear-gradient(135deg, #154f8b 0%, #0f3d6e 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+        .hero h1 span { color: #ffd816; }
+        .hero-subtitle { font-size: 1.3rem; opacity: 0.9; max-width: 700px; margin: 0 auto 40px; line-height: 1.6; }
+        .section { padding: 80px 0; }
+        .section-title { font-size: 2.2rem; font-weight: 800; color: #154f8b; text-align: center; margin-bottom: 50px; }
+        .section-dark { background: #154f8b; color: white; }
+        .section-dark .section-title { color: white; }
+        .warning-section { background: #fff5f5; padding: 60px 0; }
+        .warning-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+        .warning-item { display: flex; align-items: center; gap: 10px; color: #c53030; font-weight: 600; }
+        .warning-item::before { content: "✕"; color: #c53030; font-weight: bold; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .benefit-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid #ffd816; }
+        .benefit-card h3 { color: #154f8b; font-size: 1.1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .benefit-card p { color: #666; font-size: 0.95rem; }
+        .check-icon { color: #ffd816; font-weight: bold; }
+        .included-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .included-item { display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: rgba(212, 175, 55, 0.1); border-radius: 8px; }
+        .included-item .icon { font-size: 1.5rem; flex-shrink: 0; }
+        .included-item h4 { color: #154f8b; margin-bottom: 5px; }
+        .included-item p { color: #666; font-size: 0.9rem; }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .trust-card { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .trust-card h3 { color: #ffd816; margin-bottom: 10px; font-size: 1.1rem; }
+        .trust-card p { opacity: 0.9; font-size: 0.95rem; }
+        .faq-item { background: white; margin-bottom: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .faq-question { padding: 20px 25px; font-weight: 700; color: #154f8b; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { padding: 0 25px 20px; color: #666; line-height: 1.7; display: none; }
+        .final-cta { text-align: center; padding: 100px 0; }
+        .final-cta h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .final-cta p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        footer { background: #0f0f1e; color: rgba(255,255,255,0.6); padding: 40px 0; text-align: center; }
+        footer a { color: #ffd816; text-decoration: none; }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { margin: 0 15px; }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Get Found in <span>AI Search</span></h1>
+            <p class="hero-subtitle">See how visible your business is in tools like ChatGPT, Gemini, and AI-powered search — and discover exactly what's holding you back.</p>
+        </div>
     </section>
 
     <!-- Warning Section -->
@@ -325,18 +98,10 @@
     <section class="section section-dark">
         <div class="container">
             <h2 class="section-title">Search Has Changed — And Most Businesses Haven't</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem; opacity: 0.9;">
-                People aren't just using traditional search anymore.
-            </p>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem; opacity: 0.9;">
-                They're asking AI tools like ChatGPT, Gemini, and others for recommendations, answers, and trusted providers.
-            </p>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; opacity: 0.9;">
-                If your business isn't structured for AI visibility, you may not show up at all when those questions are asked.
-            </p>
-            <p style="text-align: center; max-width: 800px; margin: 30px auto 0; font-size: 1.2rem; color: #ffd816; font-weight: 600;">
-                That's where this report comes in.
-            </p>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem; opacity: 0.9;">People aren't just using traditional search anymore.</p>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem; opacity: 0.9;">They're asking AI tools like ChatGPT, Gemini, and others for recommendations, answers, and trusted providers.</p>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; opacity: 0.9;">If your business isn't structured for AI visibility, you may not show up at all when those questions are asked.</p>
+            <p style="text-align: center; max-width: 800px; margin: 30px auto 0; font-size: 1.2rem; color: #ffd816; font-weight: 600;">That's where this comes in.</p>
         </div>
     </section>
 
@@ -345,7 +110,6 @@
         <div class="container">
             <h2 class="section-title">What We Analyze for You</h2>
             <p style="text-align: center; max-width: 700px; margin: -30px auto 40px; color: #666;">You'll receive a structured breakdown of your current visibility, including:</p>
-            
             <div class="included-grid">
                 <div class="included-item">
                     <span class="icon">🔍</span>
@@ -390,10 +154,7 @@
                     </div>
                 </div>
             </div>
-            
-            <p style="text-align: center; margin-top: 40px; font-size: 1.1rem; color: #154f8b; font-weight: 600;">
-                Plus: Actionable recommendations you can actually use
-            </p>
+            <p style="text-align: center; margin-top: 40px; font-size: 1.1rem; color: #154f8b; font-weight: 600;">Plus: Actionable recommendations you can actually use</p>
         </div>
     </section>
 
@@ -401,8 +162,7 @@
     <section class="section" style="background: #f0f4f8;">
         <div class="container">
             <h2 class="section-title">What This Means for Your Business</h2>
-            <p style="text-align: center; max-width: 700px; margin: -30px auto 40px; color: #666;">This isn't just a report. It's a clear picture of how your business shows up in the next generation of search.</p>
-            
+            <p style="text-align: center; max-width: 700px; margin: -30px auto 40px; color: #666;">This isn't just a report. It's a clear picture of how your business shows up in the next generation of search — and what you can do about it.</p>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <h3><span class="check-icon">✓</span> AI Interpretation</h3>
@@ -434,8 +194,8 @@
                     <p>We focus specifically on AI Search Optimization (AEO), not general SEO.</p>
                 </div>
                 <div class="trust-card">
-                    <h3>📋 Structured Reports</h3>
-                    <p>We use systematic reports instead of assumptions or guesswork.</p>
+                    <h3>📋 Structured Audits</h3>
+                    <p>We use systematic audits instead of assumptions or guesswork.</p>
                 </div>
                 <div class="trust-card">
                     <h3>🤖 AI-Ready Content</h3>
@@ -457,45 +217,26 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title">Common Questions</h2>
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    What is AEO?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Answer Engine Optimization helps your website become easier for AI systems to understand, trust, and reference when people ask questions related to your services. Unlike traditional SEO which focuses on ranking in search results, AEO focuses on being the answer AI tools provide.
-                </div>
+                <div class="faq-question">What is AEO? <span>+</span></div>
+                <div class="faq-answer">Answer Engine Optimization helps your website become easier for AI systems to understand, trust, and reference when people ask questions related to your services. Unlike traditional SEO which focuses on ranking in search results, AEO focuses on being the answer AI tools provide.</div>
             </div>
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    How long does the report take?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Most reports are completed within a few business days, depending on the size of your website and the complexity of your business. We'll give you a timeframe when we receive your request.
-                </div>
+                <div class="faq-question">How long does the analysis take? <span>+</span></div>
+                <div class="faq-answer">Most analyses are completed within a few business days, depending on the size of your website and the complexity of your business. We'll give you a timeframe when we receive your request.</div>
             </div>
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    Is there any obligation?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    No. The report is completely free and provided so you can see where you stand and decide your next step. There's no sales pressure and no obligation to purchase any services.
-                </div>
+                <div class="faq-question">Is there any obligation? <span>+</span></div>
+                <div class="faq-answer">No. The analysis is completely free and provided so you can see where you stand and decide your next step. There's no sales pressure and no obligation to purchase any services.</div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
+    <!-- Final CTA Section -->
     <section class="final-cta section-dark">
         <div class="container">
             <h2>Ready to See How Visible Your Business Really Is?</h2>
-            <p>Request your Free AI Visibility Report and get a clear breakdown of where you stand — and what to do next.</p>
-
+            <p>Understanding your AI visibility is the first step to improving your online presence and getting found by more customers.</p>
         </div>
     </section>
 
@@ -510,20 +251,15 @@
     </footer>
 
     <script>
-        // FAQ toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const isOpen = answer.style.display === 'block';
-                
-                // Close all
-                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const a = q.nextElementSibling;
+                const isOpen = a.style.display === 'block';
+                document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
                 document.querySelectorAll('.faq-question span').forEach(s => s.textContent = '+');
-                
-                // Open clicked if it was closed
                 if (!isOpen) {
-                    answer.style.display = 'block';
-                    question.querySelector('span').textContent = '−';
+                    a.style.display = 'block';
+                    q.querySelector('span').textContent = '−';
                 }
             });
         });
