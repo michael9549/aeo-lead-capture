@@ -1,5 +1,6 @@
 {
   "routes": [
+    { "src": "/TuesdayQA", "dest": "https://streamyard.com/watch/rsjY7UQGuAnS" },
     { "src": "/info", "dest": "/info.html" },
     { "src": "/form", "dest": "/form.html" },
     { "src": "/thank-you", "dest": "/thank-you.html" }
